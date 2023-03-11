@@ -1,0 +1,11 @@
+services:
+  qmk:
+    image: davetron5000/qmk:0.0.1
+    pull_policy: "missing"
+    init: true
+    volumes:
+      - type: bind
+        source: "."
+        target: "/root/work/qmk"
+        consistency: "delegated"
+    entrypoint: tail -f /dev/null

@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+. ${SCRIPT_DIR}/vars
+
+echo "[ bin/build ] Building image"
+docker build  -t $ACCOUNT/$REPO:$TAG ./
+
+echo "[ bin/build ] Your Docker image has been built tagged '${ACCOUNT}/${REPO}:${TAG}'"
+
+# vim: ft=bash

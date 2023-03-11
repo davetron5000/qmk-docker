@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+. ${SCRIPT_DIR}/vars
+
+echo "[ bin/start ] Starting it up"
+docker-compose up
+
+echo "[ bin/start ] It's up and running, you can now do bin/exec bash to 'log in'"
+
+# vim: ft=bash
