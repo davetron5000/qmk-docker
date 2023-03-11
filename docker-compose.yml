@@ -1,6 +1,6 @@
 services:
   qmk:
-    image: davetron5000/qmk:0.0.1
+    image: davetron5000/qmk:9c79d2933
     pull_policy: "missing"
     init: true
     volumes:
